@@ -1,0 +1,25 @@
+[project]
+name = "nist_sp800_22"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.2.0",
+    "pydantic>=2.10.4",
+    "scipy>=1.14.1",
+    "tqdm>=4.67.1",
+]
+
+[dependency-groups]
+dev = [
+    "coverage>=7.6.9",
+    "mypy>=1.13.0",
+    "pytest>=8.3.4",
+    "ruff>=0.8.4",
+]
+
+packages = [{ include = "nist_sp800_22", from = "src" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
